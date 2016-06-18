@@ -4,7 +4,7 @@ show-tooltip = (el) ->
     tip = document.create-element \div
     tip.class-name = "tooltip"
 
-    tip.style.top = (el.get-bounding-client-rect!.bottom + 10) + \px
+    tip.style.top = (el.offset-top + el.offset-height + 10) + \px
     # assume first parent div (not p) is the column
     container = el.closest('div').get-bounding-client-rect!
     tip.style.left = container.left + \px

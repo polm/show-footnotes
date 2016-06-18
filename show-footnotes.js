@@ -6,7 +6,7 @@
       var tip, container, elnum;
       tip = document.createElement('div');
       tip.className = "tooltip";
-      tip.style.top = (el.getBoundingClientRect().bottom + 10) + 'px';
+      tip.style.top = (el.offsetTop + el.offsetHeight + 10) + 'px';
       container = el.closest('div').getBoundingClientRect();
       tip.style.left = container.left + 'px';
       tip.style.width = container.width + 'px';
